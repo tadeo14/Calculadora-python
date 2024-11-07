@@ -57,6 +57,7 @@ def div ():
 				try:
 						c = a / b
 				except ZeroDivisionError:
+						c ="Error"
 						messagebox.showerror(title="Error", message="No se puede dividir por 0")
 		else:
 			c = "error"
