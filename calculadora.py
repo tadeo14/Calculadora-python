@@ -57,7 +57,7 @@ def div ():
 				try:
 						c = a / b
 				except ZeroDivisionError:
-						c = "No se puede dividir por 0"
+						messagebox.showerror(title="Error", message="No se puede dividir por 0")
 		else:
 			c = "error"
 		ctres.insert(0,c)
@@ -69,6 +69,8 @@ def salir ():
 	if r:
 		sys.exit()
 
+def informar ():
+	messagebox.showinfo(title="Info", message="Calculadora 3.0 creada en python")
 
 
 
@@ -111,7 +113,7 @@ ctres.place(x=90, y=200)
 bsalir= tk.Button(text="Salir", command=salir)
 bsalir.place(x=60, y=240, width=100, height=40)
 
-binfo= tk.Button(text="Info")
+binfo= tk.Button(text="Info", command=informar)
 binfo.place(x=160, y=240, width=100, height=40)
 
 
